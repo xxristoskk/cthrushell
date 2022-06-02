@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<div class='row'>
+    <div class='col s12 center-align'>
+            <div id='feat-item'>
+                <video id='displayed' muted loop autoplay>
+                </video>
+            </div>
+    </div>
+</div>
+<div class='row'>
+    <div class='col s12'>
+        <div id='thumb-bar'>
+        </div>
+    </div>
+</div>
+
+<script>
+    const thumbBar = ["{% static '/admin/vids/ai/witch_animation_new_with_no_weights.mp4' %}", 
+    "{% static 'admin/vids/ai/heavenly_animation_final.mp4' %}", 
+    "{% static 'admin/vids/ai/cave.mp4' %}",
+    "{% static 'admin/vids/ai/10.mp4' %}",
+    "{% static 'admin/vids/ai/3.mp4' %}",
+    "{% static 'admin/vids/ai/glitch_disco1.mp4' %}"]
+
+    for (let i = 0; i < thumbBar.length; i++) {
+        document.getElementById('thumb-bar').innerHTML += 
+        `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
+    }
+
+    const thumbs = Array.from(document.getElementsByClassName('thumb'))
+
+    thumbs.forEach(function(element) {
+        element.addEventListener('click', function() {
+
+            document.getElementById('displayed').src = element.src
+            // document.getElementById('feat-item').innerHTML = element
+        })
+    })
+</script>
+
+{% endblock %}

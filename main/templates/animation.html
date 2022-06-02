@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class='row'>
+    <div class='col s12 center-align'>
+            <div id='feat-item'>
+                <video id='displayed' muted loop autoplay>
+                </video>
+            </div>
+    </div>
+</div>
+<div class='row'>
+    <div class='col s12'>
+        <div id='thumb-bar'>
+        </div>
+    </div>
+</div>
+
+<script>
+    const thumbBar = ["{% static 'admin/vids/glow_flowers.mp4' %}",
+    "{% static 'admin/vids/flower-no-smoke_1.mp4' %}",
+    "{% static 'admin/vids/flower3-no-smoke_1.mp4' %}",
+    "{% static 'admin/vids/flower4-no-smoke_1.mp4' %}",
+    "{% static 'admin/vids/mous1-nowater_1.mp4' %}", 
+    "{% static 'admin/vids/fire-and-smoke-face_1_1.mp4' %}",
+    "{% static 'admin/vids/jess_2.mp4' %}",
+    "{% static 'admin/vids/train_1.mp4' %}",
+    "{% static 'admin/vids/cropped_1.mp4' %}"]
+
+    for (let i = 0; i < thumbBar.length; i++) {
+        document.getElementById('thumb-bar').innerHTML += 
+        `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
+    }
+
+    const thumbs = Array.from(document.getElementsByClassName('thumb'))
+    
+    thumbs.forEach(function(element) {
+        element.addEventListener('click', function() {
+
+            document.getElementById('displayed').src = element.src
+            // document.getElementById('feat-item').innerHTML = element
+        })
+    })
+</script>
+
+{% endblock %}

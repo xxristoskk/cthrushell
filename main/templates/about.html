@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .contact a {
+        filter: grayscale(100%);
+        -webkit-transition: filter 0.5s ease-in-out;
+    }
+    .contact a:hover {
+        filter: grayscale(0%);
+        -webkit-transition: filter 0.5s ease-in-out;
+    }
+</style>
+
+<div id='about'>
+    <div class='row'>
+        <div class='col s6'>
+            <div id='self'>
+                <img src={% static '/admin/img/biopic.gif' %} style='max-width: 130%; max-height: 130%;'>
+            </div>
+        </div>
+        <div class='col s6'>
+            <div id='bio'>
+                <h2 style='color: red;'>c.thru.shell</h2>
+                <p>Creating new media art and sounds, through a distorted lens: a reflection of life in the 21st century.</p>
+            </div>
+        </div>
+    </div>
+    <div class='row center-align'>
+        <div class='contact'>
+            <div class='col s12'>
+                <a href='https://twitter.com/cThruShell'>
+                    <img src={% static 'admin/img/2021 Twitter logo - blue.png' %} style='width: 75px; height: 75px; padding: 10px;'>
+                </a>
+                <a href='https://www.instagram.com/c.thru.shell/'>
+                    <img src={% static 'admin/img/Instagram_Glyph_Gradient.png' %} style='width: 75px; height: 75px; padding: 10px;'>
+                </a>
+                <a href='https://cthrushell.bandcamp.com/'>
+                    <img src={% static 'admin/img/bandcamp-button-bc-circle-aqua-64.png' %} style='width: 75px; height: 75px; padding: 10px;'>
+                </a>
+                <a href='https://open.spotify.com/artist/6u8kkaRJL5T3xJbwoEqBaD?si=ZAWfG-9VQKuBzWvA21d8Wg'>
+                    <img src={% static 'admin/img/Spotify_Icon_CMYK_Green.png' %} style='width: 75px; height: 75px; padding: 10px;'>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
