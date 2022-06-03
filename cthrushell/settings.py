@@ -125,9 +125,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'cthrushell/static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'cthrushell/static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'cthrushell/static')
+# ]
 STATIC_URL = '/static/'
 
 # Default primary key field type
