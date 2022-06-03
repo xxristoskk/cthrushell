@@ -1,1 +1,1 @@
-web: gunicorn bandmap.wsgi --log-file -
+web: gunicorn cthrushell.wsgi --log-file -
