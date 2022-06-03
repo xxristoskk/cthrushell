@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cthrushell.herokuapp', 'herokuapp', 'heroku', '*']
 
@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'cthrushell/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
