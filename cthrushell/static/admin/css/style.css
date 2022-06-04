@@ -16,7 +16,7 @@
     }
 }
 
-@media screen and (max-width: 720px) {
+@media only screen and (max-width: 600px) {
     [class*="col "] {
         width: 100%
     }
@@ -26,6 +26,8 @@
         text-align: left;
         font-size: 30px;
         left: 5px;
+        top: 2%;
+        padding: 1px;
 
     }
 
