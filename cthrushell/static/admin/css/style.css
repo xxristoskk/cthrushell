@@ -22,12 +22,13 @@
     }
 
     .side-nav {
-        position:relative;
-        width: 100%;
+        position:absolute;
+        width: 30%;
+        font-size: 30px;
     }
 
     #feat-item {
-        margin-left: 1%;
+        margin-left: 10px;
         left: 3%;
     }
 
