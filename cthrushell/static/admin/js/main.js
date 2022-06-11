@@ -1,5 +1,4 @@
-
-if (document.querySelector('.side-nav').width == '0') {
+if (document.querySelector('.side-nav').style.width == '0') {
     const button = `
         <div class='menu'>
             <a href='http://cthrushell.com/#'><h3>XKXK</h3></a>
