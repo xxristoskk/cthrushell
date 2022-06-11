@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel='stylesheet' href="{% static 'admin/css/style.css' %}"
+    <link rel='stylesheet' href="{% static 'admin/css/style.css' %}">
+    <script src="{% static 'admin/js/main.js' %}"></script>
 </head>
 
 <body>
     <!-- navigation -->
     <div class='row'>
-        <div class='col s3'>
+        <div class='col s3' id='mobile-button'>
             <div class='side-nav'>
                 <ul>
                     <li><a href={% url 'main:about' %}>about</a></li>

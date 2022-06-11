@@ -149,13 +149,15 @@ body {
     }
 
     .side-nav {
-        position:absolute;
+        position: absolute;
         text-align: left;
         font-size: 30px;
         left: 5px;
         top: 2%;
         padding: 1px;
-        font-size: 10;
+        font-size: 8;
+        width: 0;
+        transition: 0.7s;
 
     }
 
