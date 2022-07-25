@@ -51,10 +51,16 @@
     const thumbs = Array.from(document.getElementsByClassName('thumb'))
 
     thumbs.forEach(function(element) {
-        console.log(element)
+        var source = element.src
+        if (source.split('.').pop() == 'mp4') {
+            var html_string = `<video src=${source} muted loop type='video/mp4'>`
+        } else if (source.split('.').pop() == 'png' || source.split('.').pop() == 'jpeg') {
+            var html_string = `<img src=${source} type='image'>`
+        }
+        console.log(html_string)
         element.addEventListener('click', function() {
             // document.getElementById('displayed').src = element.src
-            document.getElementById('feat-item').innerHTML = `${element}`
+            document.getElementById('feat-item').innerHTML += element
         })
     })
 </script>
