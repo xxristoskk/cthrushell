@@ -58,9 +58,10 @@
             var html_string = `<img src=${source} type='image'>`
         }
         console.log(html_string)
+
         element.addEventListener('click', function() {
             // document.getElementById('displayed').src = element.src
-            document.getElementById('feat-item').innerHTML += element
+            document.getElementById('feat-item').innerHTML += html_string
         })
     })
 </script>
