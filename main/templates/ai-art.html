@@ -39,8 +39,15 @@
     "{% static 'admin/vids/ai/10.mp4' %}"] {% endcomment %}
 
     for (let i = 0; i < thumbBar.length; i++) {
-        document.getElementById('thumb-bar').innerHTML += 
-        `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
+        console.log(thumbBar.split('.').pop())
+        if (thumbBar[i].split('.').pop() == 'mp4') {
+            document.getElementById('thumb-bar').innerHTML += 
+            `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
+        }
+        else {
+            document.getElementById('thumb-bar').innerHTML +=
+            `<img src=${thumbBar[i]} class='thumb'>`
+        }
     }
 
     const thumbs = Array.from(document.getElementsByClassName('thumb'))
