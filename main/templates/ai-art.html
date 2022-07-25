@@ -56,7 +56,7 @@
                 // document.getElementById('displayed').src = element.src
                 document.getElementById('feat-item').innerHTML = `<video src=${element.src} muted loop type='video/mp4'>`
             })            
-        } else if (element.src.split('.').pop() == 'png' || source.split('.').pop() == 'jpeg') {
+        } else if (element.src.split('.').pop() == 'png' || element.src.split('.').pop() == 'jpeg') {
             element.addEventListener('click', function() {
                 // document.getElementById('displayed').src = element.src
                 document.getElementById('feat-item').innerHTML = `<img src=${element.src} type='image'>`
