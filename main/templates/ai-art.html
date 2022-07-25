@@ -51,10 +51,10 @@
     const thumbs = Array.from(document.getElementsByClassName('thumb'))
 
     thumbs.forEach(function(element) {
-        console.log(element.innerText)
+        console.log(element)
         element.addEventListener('click', function() {
             // document.getElementById('displayed').src = element.src
-            document.getElementById('feat-item').innerHTML = element
+            document.getElementById('feat-item').innerHTML = `${element}`
         })
     })
 </script>
