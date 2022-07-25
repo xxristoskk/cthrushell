@@ -47,7 +47,7 @@ cthrushell/static/admin/vids/ai/1-small.mp4
             document.getElementById('thumb-bar').innerHTML += 
             `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
         }
-        else if (thumbBar[i].split('.').pop() == 'jpeg' or thumbBar[i].split('.').pop() == 'png') {
+        else if (thumbBar[i].split('.').pop() == 'jpeg' || thumbBar[i].split('.').pop() == 'png') {
             document.getElementById('thumb-bar').innerHTML +=
             `<img src=${thumbBar[i]} class='thumb' type='image'>`
         }
