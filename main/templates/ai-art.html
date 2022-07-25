@@ -54,7 +54,7 @@
         if (element.src.split('.').pop() == 'mp4') {
             element.addEventListener('click', function() {
                 // document.getElementById('displayed').src = element.src
-                document.getElementById('feat-item').innerHTML = `<video src=${element.src} muted loop type='video/mp4'>`
+                document.getElementById('feat-item').innerHTML = `<video src=${element.src} autoplay muted loop type='video/mp4'>`
             })            
         } else if (element.src.split('.').pop() == 'png' || element.src.split('.').pop() == 'jpeg') {
             element.addEventListener('click', function() {
