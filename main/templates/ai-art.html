@@ -22,12 +22,21 @@
 </div>
 
 <script>
-    const thumbBar = ["{% static '/admin/vids/ai/witch_animation_new_with_no_weights.mp4' %}", 
-    "{% static 'admin/vids/ai/heavenly_animation_final.mp4' %}", 
-    "{% static 'admin/vids/ai/cave.mp4' %}",
-    "{% static 'admin/vids/ai/10.mp4' %}",
-    "{% static 'admin/vids/ai/3.mp4' %}",
-    "{% static 'admin/vids/ai/glitch_disco1.mp4' %}"]
+    // thumb files
+    const thumbBar = ["{% static 'admin/img/flower goddess-upscaled-corrected-small.jpg' %}", 
+    "{% static 'admin/img/flower_album_art(8)_1-corrected3-small.jpg' %}", 
+    "{% static 'admin/img/flower-midjourney7-not-upscaled-small.jpg' %}",
+    "{% static 'admin/img/spirit flowers(2)-small.jpg' %}",
+    "{% static 'admin/vids/ai/heavenly_animation.mp4' %}",
+    "{% static 'admin/vids/ai/10.mp4' %}"]
+
+    // larg files
+    {% comment %} const mainDisplay = ["{% static 'admin/img/flower goddess-upscaled-corrected-small.jpg' %}", 
+    "{% static 'admin/img/flower_album_art(8)_1-corrected3-small.jpg' %}", 
+    "{% static 'admin/img/flower-midjourney7-not-upscaled-small.jpg' %}",
+    "{% static 'admin/img/spirit flowers(2)-small.jpg' %}",
+    "{% static 'admin/vids/ai/heavenly_animation_final.mp4' %}",
+    "{% static 'admin/vids/ai/10.mp4' %}"] {% endcomment %}
 
     for (let i = 0; i < thumbBar.length; i++) {
         document.getElementById('thumb-bar').innerHTML += 

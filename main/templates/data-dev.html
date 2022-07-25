@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class='row'>
+    <div class='col s4 center-align'>
+            <div class='card'>
+                <div class-'card-image waves-effect waves-block wave-light'>
+                    <img class='activator' src={% static 'admin/img/2.png' %}>
+                </div>
+                <div class='card-content'>
+                    <span class='card-title activator grey-text text-darken-3'>
+                        BandMap
+                    </span>
+                    <p><a href='https://bandmapv2.herokuapp'>Heroku App</a></p>
+                </div>
+                <div class='card-reveal'>
+                    <span class='card-title grey-text text-darken-4'>BandMap</span>
+                    <p>BandMap is a way to explore Bandcamp on a Map. Based on a user's 
+                        genre and location preferences, BandMap creates an interactive 
+                        map where they can find links and/or previews to the artist's 
+                        music. Also, there is a feature that allows the user to create a 
+                        Spotify playlist of the artists from a selected city.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='col s4 center-align'>
+        <div class='card'>
+            <div class-'card-image waves-effect waves-block wave-light'>
+                <img class='activator' src={% static 'admin/img/Medium-Symbol-White-CMYK@1x.png' %}>
+            </div>
+            <div class='card-content'>
+                <span class='card-title activator grey-text text-darken-3'>
+                    Data Stories
+                </span>
+                <p><a href='https://medium.com/@xristos-katsaros'>Medium</a></p>
+            </div>
+            <div class='card-reveal'>
+                <span class='card-title grey-text text-darken-4'>Data Stories</span>
+                <p>Medium is where I publish data-driven stories on datasets I build
+                    from scraping the web. Using the datasets, I create data visualizations 
+                    and talk about the insights I found (or didn't find) from analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+
+</script>
+
+{% endblock %}
