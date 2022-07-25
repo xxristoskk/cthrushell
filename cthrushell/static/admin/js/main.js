@@ -1,16 +1,16 @@
-if (document.querySelector('.side-nav').style.width == '0') {
-    const button = `
-        <div class='menu'>
-            <a href='http://cthrushell.com/#'><h3>XKXK</h3></a>
-        </div>
-    `
-    document.querySelector('#mobile-button').innerHTML += button
+// if (document.querySelector('.side-nav').style.width == '0') {
+//     const button = `
+//         <div class='menu'>
+//             <a href='http://cthrushell.com/#'><h3>XKXK</h3></a>
+//         </div>
+//     `
+//     document.querySelector('#mobile-button').innerHTML += button
 
-    document.querySelector('.menu').addEventListener('click', function() {
-        document.querySelector('.side-nav').style.width = '60'
-    })
+//     document.querySelector('.menu').addEventListener('click', function() {
+//         document.querySelector('.side-nav').style.width = '60'
+//     })
 
-}
+// }
 
 // const thumbBarImg = ["{% static 'admin/img/glitch-bg.png' %}", 
 // "{% static 'admin/img/flower2.png' %}",
