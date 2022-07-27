@@ -23,9 +23,9 @@ p {
 .side-nav {
     display: block;
     text-align: right;
-    position: fixed;
+    position: absolute;
     top: 10%;
-    left: 130px;
+    left: 100px;
     padding: 25px;
     border-radius: 20px;
 }
@@ -45,6 +45,7 @@ p {
 }
 
 #feat-item video {
+    position: fixed;
     margin-top: 10px;
     padding-top: 10px;
     max-height: 600px;
@@ -55,6 +56,7 @@ p {
 }
 
 #feat-item img {
+    position: fixed;
     margin-top: 10px;
     padding-top: 10px;
     max-height: 600px;
@@ -132,12 +134,10 @@ a:active {
     -webkit-transition: filter .3s ease-in-out;
 }
 
-#about {
-    left: 50%;
-    top: 50%;
+/* #about {
     padding: 50px;
     margin: 50px;
-}
+} */
 
 body {
     background-color: black;

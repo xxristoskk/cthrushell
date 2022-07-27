@@ -4,14 +4,19 @@
 {% block content %}
 
 <style>
-    .card-link {
-        font-size = 12px;
 
+    img {
+        max-width: 40%;
+        max-height: 40%;
+    }
+
+    p {
+        font-color: black;
     }
 
 </style>
-<div class='row'>
-    <div class='col s4 center-align'>
+<div class='row center-align'>
+    <div class='col s6 right-align'>
             <div class='card'>
                 <div class-'card-image waves-effect waves-block wave-light'>
                     <img class='activator' src={% static 'admin/img/2.png' %}>
@@ -20,11 +25,11 @@
                     <span class='card-title activator grey-text text-darken-3'>
                         BandMap
                     </span>
-                    <p><a class='card-link' href='https://bandmapv2.herokuapp'>Heroku App</a></p>
+                    <p><a class='card-link' href='https://bandmapv2.herokuapp' style='font-size:18px;'>Heroku App</a></p>
                 </div>
                 <div class='card-reveal'>
                     <span class='card-title grey-text text-darken-4'>BandMap</span>
-                    <p>BandMap is a way to explore Bandcamp on a Map. Based on a user's 
+                    <p style='color: black;'>BandMap is a way to explore Bandcamp on a Map. Based on a user's 
                         genre and location preferences, BandMap creates an interactive 
                         map where they can find links and/or previews to the artist's 
                         music. Also, there is a feature that allows the user to create a 
@@ -34,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class='col s4 center-align'>
+    <div class='col s6 right-align'>
         <div class='card'>
             <div class-'card-image waves-effect waves-block wave-light'>
                 <img class='activator' src={% static 'admin/img/Medium-Symbol-White-CMYK@1x.png' %}>
@@ -43,11 +48,11 @@
                 <span class='card-title activator grey-text text-darken-3'>
                     Data Stories
                 </span>
-                <p><a href='https://medium.com/@xristos-katsaros'>Medium</a></p>
+                <p><a href='https://medium.com/@xristos-katsaros' style='font-size:18px;'>Medium</a></p>
             </div>
             <div class='card-reveal'>
                 <span class='card-title grey-text text-darken-4'>Data Stories</span>
-                <p>Medium is where I publish data-driven stories on datasets I build
+                <p style='color: black;'>Medium is where I publish data-driven stories on datasets I build
                     from scraping the web. Using the datasets, I create data visualizations 
                     and talk about the insights I found (or didn't find) from analysis.
                 </p>
