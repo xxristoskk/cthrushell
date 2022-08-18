@@ -6,7 +6,7 @@
     <div class='pop-up'>
         <a href="javascript:void(0)" style='color: #536dfe;' class="closebtn" onclick="closePopup()">&times;</a>
         <div class='col s12 center-align'>
-                <div id='feat-item'></div>
+                <div class='feat-item'></div>
         </div>
     </div>
 </div>
@@ -18,10 +18,6 @@
 
 <script>
     // open and close functions
-    function openPopup() {
-        return document.querySelector('.pop-up').classList.add('acitvate')
-    }
-    
     function closePopup() {
         return document.querySelector('.pop-up').classList.remove('activate')
     }
@@ -29,7 +25,7 @@
     // thumb files
     const thumbBar = ["{% static 'admin/img/cyborg_eyes.jpeg' %}",
     "{% static 'admin/img/flower-glitch2000.jpeg' %}",
-    "{% static 'admin/img/me.jpeg' %}",
+    "{% static 'admin/img/me.jpg' %}",
     "{% static 'admin/img/glitch-bg.png' %}",
     "{% static 'admin/vids/mous1-nowater_1.mp4' %}", 
     "{% static 'admin/vids/train_1.mp4' %}"]
@@ -37,10 +33,12 @@
     // separate images and videos
     for (let i = 0; i < thumbBar.length; i++) {
         if (thumbBar[i].split('.').pop() == 'mp4') {
+            console.log('VIDEO')
             document.getElementById('thumb-bar').innerHTML += 
             `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
         }
         else if (thumbBar[i].split('.').pop() == 'jpeg' || thumbBar[i].split('.').pop() == 'png') {
+            console.log('IMAGE')
             document.getElementById('thumb-bar').innerHTML +=
             `<img src=${thumbBar[i]} class='thumb' type='image'>`
         }
@@ -53,15 +51,13 @@
     thumbs.forEach(function(element) {
         if (element.src.split('.').pop() == 'mp4') {
             element.addEventListener('click', function() {
-                // document.getElementById('displayed').src = element.src
-                openPopup()
-                document.getElementById('feat-item').innerHTML = `<video src=${element.src} autoplay muted loop type='video/mp4'>`
+                document.querySelector('.pop-up').classList.add('activate')
+                document.querySelector('.feat-item').innerHTML = `<video src=${element.src} autoplay muted loop type='video/mp4'>`
             })            
         } else if (element.src.split('.').pop() == 'png' || element.src.split('.').pop() == 'jpeg') {
             element.addEventListener('click', function() {
-                // document.getElementById('displayed').src = element.src
-                openPopup()
-                document.getElementById('feat-item').innerHTML = `<img src=${element.src} type='image'>`
+                document.querySelector('.pop-up').classList.add('activate')
+                document.querySelector('.feat-item').innerHTML = `<img src=${element.src} type='image'>`
             })
         }
     })

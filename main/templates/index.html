@@ -15,6 +15,7 @@
 <body>
     <!-- navigation -->
     <div class='row'>
+        {% comment %} {% include 'includes/featured.html' %} {% endcomment %}
         <div class='col s3' id='mobile-button'>
             <div class='side-nav'>
                 <ul>
@@ -26,11 +27,11 @@
                 </ul>
             </div>
         </div>
-    
-
-        <div class='col s9'>
-                {% block content %}
-                {% endblock %}
+    </div>
+    <div class='container'>
+        <div class='content'>
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
     
