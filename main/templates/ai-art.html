@@ -4,9 +4,12 @@
 {% block content %}
 
 <div class='row'>
-    <div class='col s12 center-align'>
-            <div id='feat-item'>
-            </div>
+    <div class='pop-up'>
+        <a href="javascript:void(0)" style='color: #536dfe;' class="closebtn" onclick="closePopup()">&times;</a>
+        <div class='col s12 center-align'>
+                <div id='feat-item'>
+                </div>
+        </div>
     </div>
 </div>
 <div class='row'>
@@ -18,14 +21,26 @@
 
 
 <script>
+    // close and open functions
+    function openPopup() {
+        document.querySelector('.pop-up').classList.add('acitvate')
+    }
+    
+    function closePopup() {
+        document.querySelector('.pop-up').classList.remove('activate')
+    }
+
     // thumb files
     const thumbBar = ["{% static 'admin/img/flower goddess-upscaled-corrected-small.jpeg' %}", 
     "{% static 'admin/img/flower_album_art(8)_1-corrected3-small.jpeg' %}", 
     "{% static 'admin/vids/ai/1-small.mp4' %}",
     "{% static 'admin/img/flower-midjourney7-not-upscaled-small.jpeg' %}",
     "{% static 'admin/img/spirit flowers(2)-small.jpeg' %}",
-    "{% static 'admin/vids/ai/10.mp4' %}"]
+    "{% static 'admin/vids/ai/10.mp4' %}",
+    "{% static 'admin/img/goddess1.webp' %},
+    "{% static 'admin/img/cyborgs2-corrected.webp' %}"]
 
+    // separate images and videos
     for (let i = 0; i < thumbBar.length; i++) {
         if (thumbBar[i].split('.').pop() == 'mp4') {
             document.getElementById('thumb-bar').innerHTML += 
@@ -37,17 +52,21 @@
         }
     }
 
+    // constant of all thumbnails on page
     const thumbs = Array.from(document.getElementsByClassName('thumb'))
 
+    // add appropriate click events for images and videos
     thumbs.forEach(function(element) {
         if (element.src.split('.').pop() == 'mp4') {
             element.addEventListener('click', function() {
                 // document.getElementById('displayed').src = element.src
+                openPopup()
                 document.getElementById('feat-item').innerHTML = `<video src=${element.src} autoplay muted loop type='video/mp4'>`
             })            
         } else if (element.src.split('.').pop() == 'png' || element.src.split('.').pop() == 'jpeg') {
             element.addEventListener('click', function() {
                 // document.getElementById('displayed').src = element.src
+                openPopup()
                 document.getElementById('feat-item').innerHTML = `<img src=${element.src} type='image'>`
             })
         }
