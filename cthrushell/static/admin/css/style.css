@@ -96,13 +96,13 @@ p {
 #thumb-bar {
     display:flex;
     position: fixed;
-    /* width: 250px; */
+    width: 250px;
     margin: 5px;
     /* border-radius: 15px; */
-    /* padding: 10px; */
+    padding: 5px;
     bottom: 25px;
     left: 3%;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #thumb-bar img {
