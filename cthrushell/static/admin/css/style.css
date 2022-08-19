@@ -30,24 +30,24 @@ p {
     border-radius: 20px;
 }
 
-.bio-image {
-    position:static;
-    padding: 1px;
-    bottom: auto;
-}
-
-.title {
-    position:relative;
-    padding: 1px;
-    top:-85px;
-    left:220px;
-
+.bio {
+    display: flex;
 }
 
 .contact {
-    position:relative;
+    display:flex;
     padding: 1px;
-    top:-165px;
+    position: relative;
+    left: 6%
+}
+.contact img {
+    padding: 5px;
+    vertical-align: top;
+}
+.contact p {
+    position: relative;
+    top: -42px;
+    font-size: 35px;
 }
 
 .content {
@@ -67,19 +67,6 @@ p {
 .pop-up.activate {
     display:flex;
 }
-
-/* #feat-item {
-    padding: 20px;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 17%;
-    margin-bottom: 20%;
-    display: flex;
-    overflow: hidden;
-    margin: 5px;
-    padding: 10px;
-    left: 37%;
-} */
 
 .feat-item {
     padding: 5px;
@@ -273,5 +260,29 @@ body {
         filter: grayscale(100%);
         -webkit-transition: filter .3s ease-in-out;
         cursor: crosshair;
+    }
+
+    .mobile-about {
+        position: relative;
+        top: 390px;
+    }
+
+    /* .bio {
+        display: flex;
+    } */
+    
+    .contact {
+        display:flex;
+        padding: 1px;
+        position: relative;
+    }
+    .contact img {
+        padding: 5px;
+        /* vertical-align: top; */
+    }
+    .contact p {
+        position: relative;
+        /* top: -42px; */
+        /* font-size: 35px; */
     }
 }
