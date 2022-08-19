@@ -13,46 +13,53 @@
 </head>
 
 <body>
-    <!-- navigation -->
-    <a href='javascript:void(0)' id="navBtn" style='font-size: 30px; position: absolute; left: 10px; padding: 10px; color: #564787;'>‡‡</a>
-    <div class='row'>
-        <div class='col s3'>
-            <div class='side-nav' id='nav'>
-                <ul>
-                    <li><a href={% url 'main:about' %} class='side-btn'>about</a></li>
-                    <li><a href={% url 'main:ai_art' %} class='side-btn' id="ai">ai_art</a></li>
-                    <li><a href={% url 'main:glitch_art' %} class='side-btn' id="animation">glitch_art</a></li>
-                    <li><a href={% url 'main:data_dev' %} class='side-btn' id='data'>data&dev</a></li>
-                    <li><a href={% url 'main:music' %} class='side-btn' id="music">music</a></li>
-                    <li>
-                        <div class='contact'>
-                            <a href='https://twitter.com/cThruShell'>
-                                <img src={% static 'admin/img/2021 Twitter logo - blue.png' %} style='width: 40px; height: 40px;'>
-                            </a>
-                            <a href='https://www.instagram.com/c.thru.shell/'>
-                                <img src={% static 'admin/img/Instagram_Glyph_Gradient.png' %} style='width: 40px; height: 40px;'>
-                            </a>
-                            <a href='https://cthrushell.bandcamp.com/'>
-                                <img src={% static 'admin/img/bandcamp-button-bc-circle-aqua-64.png' %} style='width: 40px; height: 40px;'>
-                            </a>
-                            <a href='https://open.spotify.com/artist/6u8kkaRJL5T3xJbwoEqBaD?si=ZAWfG-9VQKuBzWvA21d8Wg'>
-                                <img src={% static 'admin/img/Spotify_Icon_CMYK_Green.png' %} style='width: 40px; height: 40px;'>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+
+    <div class='home-video'>
+        <video autoplay muted loop src={% static 'admin/vids/train_1.mp4' %}>
+    </div>
+
+    <div class='overlay'>
+        <!-- navigation -->
+        <a href='javascript:void(0)' id="navBtn">‡‡</a>
+
+        <div class='container'>
+            <div class='content'>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        
+        <div class='row'>
+            <div class='col s3'>
+                <div class='side-nav' id='nav'>
+                    <ul>
+                        <li><a href={% url 'main:about' %} class='side-btn'>about</a></li>
+                        <li><a href={% url 'main:ai_art' %} class='side-btn' id="ai">ai_art</a></li>
+                        <li><a href={% url 'main:glitch_art' %} class='side-btn' id="animation">glitch_art</a></li>
+                        <li><a href={% url 'main:data_dev' %} class='side-btn' id='data'>data&dev</a></li>
+                        <li><a href={% url 'main:music' %} class='side-btn' id="music">music</a></li>
+                        <li>
+                            <div class='contact'>
+                                <a href='https://twitter.com/cThruShell'>
+                                    <img src={% static 'admin/img/2021 Twitter logo - blue.png' %}>
+                                </a>
+                                <a href='https://www.instagram.com/c.thru.shell/'>
+                                    <img src={% static 'admin/img/Instagram_Glyph_Gradient.png' %}>
+                                </a>
+                                <a href='https://cthrushell.bandcamp.com/'>
+                                    <img src={% static 'admin/img/bandcamp-button-bc-circle-aqua-64.png' %}>
+                                </a>
+                                <a href='https://open.spotify.com/artist/6u8kkaRJL5T3xJbwoEqBaD?si=ZAWfG-9VQKuBzWvA21d8Wg'>
+                                    <img src={% static 'admin/img/Spotify_Icon_CMYK_Green.png' %}>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class='container'>
-        <div class='content'>
-            {% block content %}
-            {% endblock %}
-        </div>
-    </div>
-    <div class='row'>
 
-    </div>
 
     <script>
 
