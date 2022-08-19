@@ -5,11 +5,11 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def glitch_art(request):
-    return render(request, 'glitch-art.html')
+def stills(request):
+    return render(request, 'stills.html')
 
-def ai_art(request):
-    return render(request, 'ai-art.html')
+def motion(request):
+    return render(request, 'motion.html')
 
 def music(request):
     return render(request, 'music.html')
