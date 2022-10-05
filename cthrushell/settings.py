@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-m$(-+lu$4kbqi2@y%bptcko9h&i#7*po(cwtlj$$3-@-pdti!*
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cthrushell.herokuapp.com','.herokuapp', '127.0.0.1']
 
@@ -127,11 +127,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'cthrushell/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'cthrushell/static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'cthrushell/static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'cthrushell/static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
