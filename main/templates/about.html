@@ -12,22 +12,36 @@
         -webkit-transition: filter 0.5s ease-in-out;
     }
 
+    .bio-link {
+        font-size: 22px;
+    }
 </style>
 
 <div class='row'>
     <div class='mobile-about'>
-        <div class='col s12'>
             <div class='bio'>
-                <div class='bio-text'>
-                    <h1>c.thru.shell</h1>
-                    <h5 style='color: white;'><i>they/them</i></h5>
-                    <span>
-                        The moniker of artist and data analyst Xristos K. Between crunching numbers and coding, Xristos combines their creative and
-                        technical skills to create art and sounds through a digital lens: reflecting life in the 21st century.
-                    </span>
-                    {% comment %} <span><i>Creating new media art and sounds, through a distorted lens: a reflection of life in the 21st century.</i></span> {% endcomment %}
+                <div class='col 6s'>
+                    <img src={% static '/admin/img/me.jpg' %}>
                 </div>
-                <img src={% static '/admin/img/me.jpg' %}>
+                <div class='col 6s'>
+                    <div class='bio-text'>
+                        <h1>c.thru.shell</h1>
+                        <h4 style='color: white;'><i>[they/them]</i></h4>
+                        <span>
+                            The moniker of artist and data scientist <span style='color:lightblue;top:0;'>Xristos K</span>. Combining their creative and technical skills, Xristos creates audio and visual art. 
+                            At a young age, they played guitar and made various forms of visual art, then went onto study Philosophy and Science. After undergrad, Xristos graduated 
+                            from a data science bootcamp, where they learned the skills of a data analyst, scientist, and engineer.
+                            <p></p>
+                            They have written a series of data stories as a data journalist and researcher at <a class='bio-link' href='https://qri.io/'>Qri</a>.
+                            As data and machine learning become more complex, and integrated with art, Xristos works as c.thru.shell, a project that utilizes their collective 
+                            experiences and skills. This project isn't centered around any consistent style, it is an individual reflection of life in the 21st century with 
+                            executive dysfunction.
+                            <p></p>
+                            For more art, visit the <a href='https://www.youtube.com/channel/UC-asbIleSWdUWrTZ6BSnQ4w' class='bio-link'>YouTube</a> channel and <a class='bio-link' href='https://www.instagram.com/c.thru.shell/'>Instagram</a>.
+                        </span>
+                        {% comment %} <span><i>Creating new media art and sounds, through a distorted lens: a reflection of life in the 21st century.</i></span> {% endcomment %}
+                    </div>
+                </div>
             </div>
             
         </div>

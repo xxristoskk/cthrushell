@@ -25,16 +25,20 @@
     // thumb files
     const thumbBar = [
     "{% static 'admin/vids/ai/1-small.mp4' %}",
-    "{% static 'admin/vids/ai/10.mp4' %}",
+    "{% static 'admin/vids/motor-glitch-ai-big.mp4' %}",
     "{% static 'admin/vids/mous1-nowater_1.mp4' %}", 
-    "{% static 'admin/vids/ai/heavenly_animation_final.mp4' %}"
+    "{% static 'admin/vids/ai/heavenly_animation_final.mp4' %}",
+    "{% static 'admin/vids/ai/kai-alt.mp4' %}",
+    "{% static 'admin/vids/ai/dance-alt.mp4' %}",
+    "{% static 'admin/vids/mirror.mp4' %}",
+    "{% static 'admin/vids/flower3-no-smoke_1.mp4' %}"
     ]
 
     // separate images and videos
     for (let i = 0; i < thumbBar.length; i++) {
         if (thumbBar[i].split('.').pop() == 'mp4') {
             document.getElementById('thumb-bar').innerHTML += 
-            `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4' class='videos'>`
+            `<video src=${thumbBar[i]} class='thumb' muted loop onmouseover=this.play() onmouseout=this.pause() type='video/mp4'>`
         }
         else if (thumbBar[i].split('.').pop() == 'jpeg' || thumbBar[i].split('.').pop() == 'png') {
             document.getElementById('thumb-bar').innerHTML +=
